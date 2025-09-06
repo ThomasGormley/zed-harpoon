@@ -1,0 +1,39 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "save crp",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && echo $ZED_RELATIVE_FILE >> $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt",
+    "reveal": "never",
+    "hide": "always",
+  },
+  {
+    "label": "open crp 1",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '1p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always",
+  },
+  {
+    "label": "open crp 2",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '2p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always",
+  },
+  {
+    "label": "open crp 3",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '3p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always",
+  },
+  {
+    "label": "edit crp",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && zed $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always",
+  },
+]
