@@ -2,6 +2,8 @@
 
 Harpoon-like functionality for Zed editor: quickly add and open file marks using tasks and keybindings.
 
+Zed's extension system doesn't yet support defining actions for users. This approach [is a workaround](https://github.com/zed-industries/zed/issues/17353#issuecomment-2568710981) to that by appending to the tasks configuration on behalf of the user.
+
 ## Installation
 
 > ⚠️ **Warning**: This will modify your Zed config files (`~/.config/zed/tasks.json` and `keymap.json`) and create backups with `.harpoon_backup` suffix.
