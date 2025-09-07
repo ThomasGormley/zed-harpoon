@@ -27,6 +27,13 @@
     "hide": "always"
   },
   {
+    "label": "open mark 4",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '4p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
     "label": "edit marks",
     "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && zed $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt",
     "shell": "system",
