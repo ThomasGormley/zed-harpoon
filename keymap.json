@@ -1,0 +1,13 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-q": ["task::Spawn", { "task_name": "open mark 1" }],
+      "ctrl-w": ["task::Spawn", { "task_name": "open mark 2" }],
+      "ctrl-e": ["task::Spawn", { "task_name": "open mark 3" }],
+      "ctrl-r": ["task::Spawn", { "task_name": "open mark 4" }],
+      "ctrl-a": ["task::Spawn", { "task_name": "add mark" }],
+      "ctrl-i": ["task::Spawn", { "task_name": "edit marks" }]
+    }
+  }
+]

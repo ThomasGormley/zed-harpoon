@@ -1,0 +1,36 @@
+[
+  {
+    "label": "add mark",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && echo $ZED_RELATIVE_FILE >> $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
+    "label": "open mark 1",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '1p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
+    "label": "open mark 2",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '2p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
+    "label": "open mark 3",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && cat $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt | sed -n '3p' | xargs zed",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
+    "label": "edit marks",
+    "command": "PROJECT_NAME=$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")-$(basename \"$ZED_WORKTREE_ROOT\") && zed $HOME/.config/zed/${PROJECT_NAME}__harpoon.txt",
+    "shell": "system",
+    "reveal": "never",
+    "hide": "always"
+  }
+]
