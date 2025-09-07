@@ -4,13 +4,15 @@ Harpoon-like functionality for Zed editor: quickly add and open file marks using
 
 ## Installation
 
-Run the installer:
+> ⚠️ **Warning**: This will modify your Zed config files (`~/.config/zed/tasks.json` and `keymap.json`) and create backups with `.harpoon_backup` suffix.
+
+Run the installer from the [repo](https://github.com/thomasgormley/zed-harpoon):
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/thomasgormley/zed-harpoon/main/scripts/install.sh | bash
 ```
 
-This appends tasks and keybindings to your Zed config (`~/.config/zed/tasks.json` and `keymap.json`). Backups are created, and a confirmation prompt is shown.
+This appends tasks and keybindings to your Zed config. A confirmation prompt is shown in interactive mode (TTY); in non-interactive mode (e.g., piped curl), it proceeds automatically. Backups are always created.
 
 ## Usage
 

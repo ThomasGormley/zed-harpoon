@@ -17,13 +17,17 @@ NC='\033[0m' # No Color
 
 echo -e "${YELLOW}⚠️  Warning: This installation will strip JSON comments from tasks.json and keymap.json, but a backup will be created.${NC}"
 
-read -p "Do you want to continue? (y/n): " confirm
-if [[ ! $confirm =~ ^[Yy]$ ]]; then
-  echo -e "${RED}Installation cancelled.${NC}"
-  exit 1
+if [ -t 0 ]; then
+  read -p "Do you want to continue? (y/n): " confirm
+  if [[ ! $confirm =~ ^[Yy]$ ]]; then
+    echo -e "${RED}Installation cancelled.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${YELLOW}Proceeding automatically (non-interactive mode).${NC}"
 fi
 
-echo -e "🚀 Installing Harpoon tasks and keybindings to Zed config..."
+echo -e "${GREEN}🚀 Installing Harpoon tasks and keybindings to Zed config...${NC}"
 
 ZED_CONFIG="$HOME/.config/zed"
 PROJECT_TASKS="tasks.json"
